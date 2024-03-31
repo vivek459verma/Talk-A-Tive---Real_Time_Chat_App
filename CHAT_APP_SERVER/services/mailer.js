@@ -3,8 +3,7 @@ const SibApiV3Sdk = require("@getbrevo/brevo");
 let apiInstance = new SibApiV3Sdk.TransactionalEmailsApi();
 
 let apiKey = apiInstance.authentications["apiKey"];
-apiKey.apiKey =
-  "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";
+apiKey.apiKey = process.env.MY_API_KEY;
 
 let sendEmail = ({ to, sender, subject, htmlContent, attachments, name }) => {
   let sendSmtpEmail = new SibApiV3Sdk.SendSmtpEmail();
