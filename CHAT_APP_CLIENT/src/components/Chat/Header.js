@@ -14,7 +14,7 @@ import {
 } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import { CaretDown, MagnifyingGlass, Phone, VideoCamera } from "phosphor-react";
-import { faker } from "@faker-js/faker";
+// import { faker } from "@faker-js/faker";
 import useResponsive from "../../hooks/useResponsive";
 import { ToggleSidebar } from "../../redux/slices/app";
 import { useDispatch, useSelector } from "react-redux";

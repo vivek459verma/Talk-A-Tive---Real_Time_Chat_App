@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Badge, Stack, Avatar, Typography } from "@mui/material";
 import { styled, useTheme, alpha } from "@mui/material/styles";
-import { useSearchParams } from "react-router-dom";
+// import { useSearchParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { SelectConversation } from "../redux/slices/app";
 
@@ -46,7 +46,7 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 
 const ChatElement = ({ img, name, msg, time, unread, online, id }) => {
   const dispatch = useDispatch();
-  const {room_id} = useSelector((state) => state.app);
+  const { room_id } = useSelector((state) => state.app);
   const selectedChatId = room_id?.toString();
 
   let isSelected = +selectedChatId === id;
@@ -60,7 +60,7 @@ const ChatElement = ({ img, name, msg, time, unread, online, id }) => {
   return (
     <StyledChatBox
       onClick={() => {
-        dispatch(SelectConversation({room_id: id}));
+        dispatch(SelectConversation({ room_id: id }));
       }}
       sx={{
         width: "100%",

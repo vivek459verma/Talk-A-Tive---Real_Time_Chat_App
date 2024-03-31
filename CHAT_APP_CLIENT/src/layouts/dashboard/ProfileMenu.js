@@ -1,7 +1,7 @@
 import React from "react";
 import { Avatar, Box, Fade, Menu, MenuItem, Stack } from "@mui/material";
 
-import { faker } from "@faker-js/faker";
+// import { faker } from "@faker-js/faker";
 
 import { Profile_Menu } from "../../data";
 import { useDispatch, useSelector } from "react-redux";
@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 import { AWS_S3_REGION, S3_BUCKET_NAME } from "../../config";
 
 const ProfileMenu = () => {
-  const {user} = useSelector((state) => state.app);
+  const { user } = useSelector((state) => state.app);
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -64,15 +64,13 @@ const ProfileMenu = () => {
               <MenuItem onClick={handleClose}>
                 <Stack
                   onClick={() => {
-                    if(idx === 0) {
+                    if (idx === 0) {
                       navigate("/profile");
-                    }
-                    else if(idx === 1) {
+                    } else if (idx === 1) {
                       navigate("/settings");
-                    }
-                    else {
+                    } else {
                       dispatch(LogoutUser());
-                      socket.emit("end", {user_id});
+                      socket.emit("end", { user_id });
                     }
                   }}
                   sx={{ width: 100 }}

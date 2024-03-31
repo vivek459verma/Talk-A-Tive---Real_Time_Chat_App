@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useCallback, useState } from "react";
 import * as Yup from "yup";
 // form
@@ -33,14 +34,7 @@ const ProfileForm = () => {
     defaultValues,
   });
 
-  const {
-    reset,
-    watch,
-    control,
-    setValue,
-    handleSubmit,
-    formState: { isSubmitting, isSubmitSuccessful },
-  } = methods;
+  const { watch, setValue, handleSubmit, formState } = methods;
 
   const values = watch();
 

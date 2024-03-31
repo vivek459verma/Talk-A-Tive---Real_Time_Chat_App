@@ -299,6 +299,7 @@ const CallDialog = ({ open, handleClose }) => {
       .catch((err) => {
         console.log(err);
       });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

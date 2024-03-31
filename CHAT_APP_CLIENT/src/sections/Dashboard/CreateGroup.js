@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import * as Yup from "yup";
 import {
@@ -53,13 +54,7 @@ const CreateGroupForm = ({ handleClose }) => {
     defaultValues,
   });
 
-  const {
-    reset,
-    watch,
-    setValue,
-    handleSubmit,
-    formState: { isSubmitting, isValid },
-  } = methods;
+  const { handleSubmit, formState } = methods;
 
   const onSubmit = async (data) => {
     try {
