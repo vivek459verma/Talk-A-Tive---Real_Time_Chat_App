@@ -4,9 +4,14 @@ import { CaretLeft } from "phosphor-react";
 import ProfileForm from "../../../sections/Dashboard/Settings/ProfileForm";
 import { useDispatch } from "react-redux";
 import { FetchUserProfile } from "../../../redux/slices/app";
+import Logo from "../../../assets/Images/Talk ‘A’ Tive.png";
+import Logo1 from "../../../assets/Images/Talk ‘A’ Tive (1).png";
+import { Link } from "react-router-dom";
+import { useTheme } from "@mui/material/styles";
 
 const Profile = () => {
   const dispatch = useDispatch();
+  const theme = useTheme();
 
   useEffect(() => {
     dispatch(FetchUserProfile());
@@ -52,9 +57,32 @@ const Profile = () => {
               theme.palette.mode === "light"
                 ? "#FFF"
                 : theme.palette.background.paper,
-            borderBottom: "6px solid #0162C4",
           }}
-        ></Box>
+        >
+          <Stack
+            spacing={2}
+            sx={{ height: "100%", width: "100%" }}
+            alignItems="center"
+            justifyContent={"center"}
+          >
+            <img
+              src={theme.palette.mode === "light" ? Logo : Logo1}
+              alt="chat app logo"
+            />
+            <Typography variant="subtitle2">
+              Select a Chat or start a{" "}
+              <Link
+                style={{
+                  color: theme.palette.primary.main,
+                  textDecoration: "none",
+                }}
+                to="/"
+              >
+                New Conversation
+              </Link>
+            </Typography>
+          </Stack>
+        </Box>
       </Stack>
     </>
   );

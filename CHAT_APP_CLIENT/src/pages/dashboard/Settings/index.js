@@ -20,7 +20,7 @@ import {
   Info,
 } from "phosphor-react";
 import Logo from "../../../assets/Images/Talk ‘A’ Tive.png";
-import Logo1 from "../../../assets/Images/Talk ‘A’ Tive (2).png";
+import Logo1 from "../../../assets/Images/Talk ‘A’ Tive (1).png";
 import { Link } from "react-router-dom";
 import { useTheme } from "@mui/material/styles";
 import { faker } from "@faker-js/faker";
