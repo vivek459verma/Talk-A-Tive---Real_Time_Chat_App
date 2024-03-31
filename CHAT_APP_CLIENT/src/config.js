@@ -4,7 +4,7 @@ import { enUS, frFR, zhCN, viVN, arSD } from "@mui/material/locale";
 // routes
 import { PATH_DASHBOARD } from "./routes/paths";
 
-export const BASE_URL = "https://talk-a-tive-real-time-chat-app.onrender.coms";
+export const BASE_URL = "https://talk-a-tive-real-time-chat-app.onrender.com";
 
 export const S3_BUCKET_NAME = "codingmonk";
 export const AWS_ACCESS_KEY = "AKIARPJQ4HSYLBIK2TDE";
