@@ -46,7 +46,7 @@ Talk 'A' Tive is a real-time chat application built using the MERN stack (MongoD
 
 ## Deployment
 
-You can try out Talk 'A' Tive by visiting the deployed version at [Talk 'A' Tive - Real-Time Chat Application]
+You can try out Talk 'A' Tive by visiting the deployed version at [[Talk 'A' Tive - Real-Time Chat Application](https://talk-a-tive-real-time-chat-app.vercel.app/)]
 
 ## Let's Build Together!
 
